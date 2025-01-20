@@ -3,9 +3,12 @@ import os
 from sqlalchemy import create_engine
 import mysql.connector as MyConn
 def insert_yfinance_data(ticker,data):
-    username = os.getenv('USERNAME_SQL')
-    password = os.getenv('PASSWORD_SQL')
-    host = os.getenv('HOST_SQL')
+    # username = os.getenv('USERNAME_SQL')
+    # password = os.getenv('PASSWORD_SQL')
+    # host = os.getenv('HOST_SQL')
+    username  = 'abdullah'
+    password = 'Abdullah@123'
+    host = '192.168.1.208'
     connection = MyConn.connect(
         host=host,
         user=username,
