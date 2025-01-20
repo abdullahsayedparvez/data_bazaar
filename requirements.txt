@@ -1,0 +1,7 @@
+mysql-connector-python
+yahoo_fin
+yfinance
+pandas
+SQLAlchemy
+pyarrow
+fastparquet

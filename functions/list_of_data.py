@@ -3,7 +3,7 @@ import pandas as pd
 
 # Path to the Parquet file
 def get_tickers():
-    file_path = r"C:\Users\abdul\ansaar-pipeline\lake_data\raw\screener_in\all_instruments.parquet"
+    file_path = r"/app/data/all_instruments.parquet"
     df = pd.read_parquet(file_path)
     nse_code = df['nse_code'].to_list()
     nse_code = list(filter(lambda x: x != '', nse_code))
