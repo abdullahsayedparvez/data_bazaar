@@ -9,7 +9,7 @@ sys.path.append(pwd)
 from functions.list_of_data import get_tickers
 from functions.insert_data_in_sql_yfinance import insert_yfinance_data
 
-tickers = get_tickers()
+ticker_without_ns_bo,tickers = get_tickers()
 today = date.today()
 from_day = today - timedelta(days=(365 * 28) + 1)
 print('total_tickers -->',len(tickers))
