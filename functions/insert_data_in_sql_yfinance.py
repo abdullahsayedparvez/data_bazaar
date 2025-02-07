@@ -1,19 +1,24 @@
 import pandas as pd
-import os
+import os , sys
 from sqlalchemy import create_engine
 import mysql.connector as MyConn
+pwd = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(pwd)
+from config import CONFIG
 def insert_yfinance_data(ticker,data):
     # username = os.getenv('USERNAME_SQL')
     # password = os.getenv('PASSWORD_SQL')
     # host = os.getenv('HOST_SQL')
     username  = 'abdullah'
     password = 'Abdullah@123'
-    host = '192.168.1.208'
+    host = 'CONFIG.HOST_SQL'
+    
     connection = MyConn.connect(
-        host=host,
-        user=username,
-        password=password
+        host=f'{CONFIG.HOST_SQL}',
+        user=f'{CONFIG.USERNAME_SQL}',
+        password=f'{CONFIG.PASSWORD_SQL}'
     )
+    
     if connection.is_connected():
         cursor = connection.cursor()
 
