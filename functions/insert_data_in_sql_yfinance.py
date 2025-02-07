@@ -6,13 +6,6 @@ pwd = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(pwd)
 from config import CONFIG
 def insert_yfinance_data(ticker,data):
-    # username = os.getenv('USERNAME_SQL')
-    # password = os.getenv('PASSWORD_SQL')
-    # host = os.getenv('HOST_SQL')
-    username  = 'abdullah'
-    password = 'Abdullah@123'
-    host = 'CONFIG.HOST_SQL'
-    
     connection = MyConn.connect(
         host=f'{CONFIG.HOST_SQL}',
         user=f'{CONFIG.USERNAME_SQL}',
