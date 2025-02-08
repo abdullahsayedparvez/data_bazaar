@@ -30,4 +30,4 @@ jobs:
       
       - name: Run Tests with Coverage
         run: |
-          poetry run pytest finance_data_scrapers
+          pytest finance_data_scrapers
