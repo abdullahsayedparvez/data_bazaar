@@ -30,8 +30,4 @@ jobs:
       
       - name: Run Tests with Coverage
         run: |
-          poetry run pytest ansaar_pipelines
-
-      
-
-
+          poetry run pytest finance_data_scrapers
